@@ -22,8 +22,8 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/task-1:latest /CI-CD-Learning/task-1
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/task-1:latest
+          docker build -t CI-CD-Learning/task-1:latest ./task-1
+          docker push CI-CD-Learning/task-1:latest
 
       - name: Notify Success
         if: success()
